@@ -15,7 +15,7 @@ import (
 // Struct to hold the broker state
 type Broker[T any] struct {
 	// Push messages here to broadcast them to all connected clients
-	//Broadcast chan T
+	// Broadcast chan T
 
 	// New client connections, channel holds the clientID
 	newClients chan string
@@ -42,7 +42,6 @@ type Broker[T any] struct {
 // Create a new broker
 func NewBroker[T any]() *Broker[T] {
 	broker := &Broker[T]{
-
 		newClients:     make(chan string),
 		closingClients: make(chan string),
 		clients:        make(map[string]chan T),
@@ -128,7 +127,11 @@ func (broker *Broker[T]) listen() {
 			for group := range broker.groups {
 				for i, grpClientID := range broker.groups[group] {
 					if grpClientID == clientID {
-						broker.groups[group] = append(broker.groups[group][:i], broker.groups[group][i+1:]...)
+						if len(broker.groups[group]) == 1 {
+							delete(broker.groups, group)
+						} else {
+							broker.groups[group] = append(broker.groups[group][:i], broker.groups[group][i+1:]...)
+						}
 					}
 				}
 			}
