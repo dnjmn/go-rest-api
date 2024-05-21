@@ -4,7 +4,7 @@
 FROM golang:1.21-alpine as go-build
 WORKDIR /build
 
-ARG GO_PKG="github.com/benc-uk/go-rest-api/cmd"
+ARG GO_PKG="github.com/dnjmn/go-rest-api/cmd"
 ARG VERSION="0.0.1"
 ARG BUILD_INFO="Local Docker build"
 ARG CGO_ENABLED=0

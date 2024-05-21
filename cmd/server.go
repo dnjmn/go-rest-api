@@ -12,9 +12,9 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/benc-uk/go-rest-api/pkg/auth"
-	"github.com/benc-uk/go-rest-api/pkg/env"
-	"github.com/benc-uk/go-rest-api/pkg/logging"
+	"github.com/dnjmn/go-rest-api/pkg/auth"
+	"github.com/dnjmn/go-rest-api/pkg/env"
+	"github.com/dnjmn/go-rest-api/pkg/logging"
 
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/chi/v5"

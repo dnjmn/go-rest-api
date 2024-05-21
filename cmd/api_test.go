@@ -14,9 +14,9 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"github.com/benc-uk/go-rest-api/pkg/api"
-	"github.com/benc-uk/go-rest-api/pkg/auth"
-	"github.com/benc-uk/go-rest-api/pkg/httptester"
+	"github.com/dnjmn/go-rest-api/pkg/api"
+	"github.com/dnjmn/go-rest-api/pkg/auth"
+	"github.com/dnjmn/go-rest-api/pkg/httptester"
 )
 
 func TestUsers(t *testing.T) {

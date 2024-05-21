@@ -8,7 +8,7 @@
 package main
 
 import (
-	"github.com/benc-uk/go-rest-api/pkg/api"
+	"github.com/dnjmn/go-rest-api/pkg/api"
 	"github.com/go-chi/chi/v5"
 )
 

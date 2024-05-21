@@ -1,4 +1,4 @@
-module github.com/benc-uk/go-rest-api
+module github.com/dnjmn/go-rest-api
 
 go 1.21
 

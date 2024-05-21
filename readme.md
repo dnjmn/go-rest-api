@@ -29,7 +29,7 @@ Also included are a standard and reusable Dockerfile & makefile, both of which i
 This is a baseline from which you can extend, in order to run your own API, see the `cmd/server.go` for an example of how this is done. A quick summary is:
 
 ```go
-import "github.com/benc-uk/go-rest-api/pkg/api"
+import "github.com/dnjmn/go-rest-api/pkg/api"
 
 type MyAPI struct {
   // Embed and wrap the base API struct

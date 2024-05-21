@@ -14,7 +14,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/benc-uk/go-rest-api/pkg/problem"
+	"github.com/dnjmn/go-rest-api/pkg/problem"
 	"github.com/go-chi/chi/v5"
 )
 

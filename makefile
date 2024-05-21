@@ -5,7 +5,7 @@ SRC_DIR := ./cmd
 
 # Most likely want to override these when calling `make image`
 IMAGE_REG ?= ghcr.io
-IMAGE_REPO ?= benc-uk/go-rest-api
+IMAGE_REPO ?= dnjmn/go-rest-api
 IMAGE_TAG ?= latest
 IMAGE_NAME := $(IMAGE_REG)/$(IMAGE_REPO)
 
@@ -51,7 +51,7 @@ build: ## 🔨 Run a local build without a container
 	@figlet $@ || true
 	go build -o bin/server \
 	  -ldflags "-X main.version=$(VERSION) -X 'main.buildInfo=$(BUILD_INFO)'" \
-	  github.com/benc-uk/go-rest-api/cmd
+	  github.com/dnjmn/go-rest-api/cmd
 
 run: install-tools ## 🏃 Run server with hot reload
 	@figlet $@ || true
